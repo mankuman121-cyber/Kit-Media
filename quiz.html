@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuil Sifer - Kuiz Sphinx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="sand-overlay"></div>
+
+    <nav>
+        <div class="logo">𓂀 Kriptografi Dalam Keselamatan Data</div>
+        <ul class="nav-links">
+            <li><a href="index.html">𓉔 Laman Utama</a></li>
+            <li><a href="learn.html">𓀿 Nota</a></li>
+            <li><a href="textbook.html">📖 Buku Teks</a></li>
+            <li><a href="tools.html">𓌪 Alat Sifer</a></li>
+            <li><a href="challenges.html">⚔️ Cabaran</a></li>
+            <li><a href="quiz.html" class="active">𓃭 Kuiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hieroglyph-border">
+                <h1>𓃭 Kuiz Sphinx 𓃭</h1>
+                <p>Jawab teka-teki untuk membuktikan pengetahuan anda</p>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>𓆙 Bilik Kuiz Interaktif</h2>
+            <p class="scroll-text">
+                Masuki bilik suci di bawah. Setiap bilik mengandungi ujian unik yang dibuat oleh jurutulis purba. Klik pada mana-mana bilik untuk memulakan perjalanan anda...
+            </p>
+
+            <div class="quiz-boxes-grid">
+                <a href="https://view.genially.com/694654961562ec4b069c46ae/interactive-content-dragons-dungeon-breakout" class="quiz-box" target="_blank">
+                    <div class="quiz-box-icon">𓋹</div>
+                    <h3>Bilik Caesar</h3>
+                    <p>Uji pengetahuan anda tentang Sifer Caesar. Kuasai seni mengalihkan huruf dan nyahkod mesej seperti seorang jeneral Rom.</p>
+                    <div class="quiz-box-footer">
+                        <span class="difficulty easy">Tahap Permulaan</span>
+                        <span class="quiz-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="https://view.genially.com/6957d9e0bff8ab96d84356b9/interactive-content-horror-escape-room" class="quiz-box" target="_blank">
+                    <div class="quiz-box-icon">𓁹</div>
+                    <h3>Dewan Penggantian</h3>
+                    <p>Terokai misteri penggantian huruf. Pelajari bagaimana pendeta menyembunyikan teks suci daripada orang awam.</p>
+                    <div class="quiz-box-footer">
+                        <span class="difficulty medium">Tahap Pertengahan</span>
+                        <span class="quiz-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="quiz-box" target="_blank">
+                    <div class="quiz-box-icon">𓆣</div>
+                    <h3>Tempat Suci Vigenère</h3>
+                    <p>Cabar diri anda dengan sifer polialfabetik. Hanya jurutulis yang paling berdedikasi membuka pengetahuan lanjutan ini.</p>
+                    <div class="quiz-box-footer">
+                        <span class="difficulty hard">Tahap Lanjutan</span>
+                        <span class="quiz-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="quiz-box" target="_blank">
+                    <div class="quiz-box-icon">𓃭</div>
+                    <h3>Kuil Sejarah</h3>
+                    <p>Temui sejarah kriptografi yang menarik. Dari Mesir purba hingga penyulitan moden, jejaki evolusi penulisan rahsia.</p>
+                    <div class="quiz-box-footer">
+                        <span class="difficulty medium">Pengetahuan Sejarah</span>
+                        <span class="quiz-arrow">Masuk →</span>
+                    </div>
+                </a>
+            </div>
+
+            
+        </div>
+
+        <div class="card papyrus">
+            <h2>𓃭 Cabaran Kuiz Tradisional</h2>
+            <p class="scroll-text">
+                Lebih suka ujian pantas? Cuba kuiz tradisional kami di bawah...
+            </p>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="quizProgress" style="width: 0%"></div>
+            </div>
+            <p style="text-align: center; margin-top: 0.5rem; font-weight: bold;">
+                Soalan <span id="questionNumber">1</span> daripada 5
+            </p>
+        </div>
+
+        <div class="card papyrus">
+            <div id="quizContainer">
+                <h3 id="questionText" class="sphinx-question">Apakah yang dilakukan oleh Sifer Caesar?</h3>
+                
+                <div class="quiz-option" onclick="selectAnswer(this, false)">
+                    <strong>A)</strong> Mengacau semua huruf secara rawak seperti ribut pasir
+                </div>
+                <div class="quiz-option" onclick="selectAnswer(this, true)">
+                    <strong>B)</strong> Mengalihkan setiap huruf dengan nombor tetap
+                </div>
+                <div class="quiz-option" onclick="selectAnswer(this, false)">
+                    <strong>C)</strong> Menukar huruf kepada nombor hieroglif
+                </div>
+                <div class="quiz-option" onclick="selectAnswer(this, false)">
+                    <strong>D)</strong> Memadamkan huruf yang diberkati oleh Ra
+                </div>
+                
+                <button onclick="nextQuestion()" class="egyptian-btn large" style="margin-top: 1.5rem;">
+                    Teka-teki Seterusnya Sphinx →
+                </button>
+                
+                <div id="quizResult" style="margin-top: 1rem; font-size: 1.2rem; font-weight: bold;"></div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>📜 Tahukah Anda?</h2>
+            <div class="fact-box">
+                <p><strong>Fakta Sejarah:</strong> Julius Caesar menggunakan sifernya dengan anjakan 3 untuk berkomunikasi dengan jeneralnya. Orang Rom memanggilnya "Sifer Caesar" kerana dia adalah salah seorang yang pertama menggunakannya secara sistematik untuk komunikasi ketenteraan.</p>
+            </div>
+            <div class="fact-box" style="margin-top: 1rem;">
+                <p><strong>Penggunaan Moden:</strong> Walaupun sifer Caesar terlalu mudah untuk penyulitan moden, ia mengajar konsep asas yang menggerakkan semua kriptografi: mengubah maklumat yang boleh dibaca kepada bentuk yang tidak boleh dibaca menggunakan kunci.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="egyptian-footer">
+        <p>𓂀 Kuil Sifer - Di Mana Kebijaksanaan Purba Bertemu Kriptografi Moden 𓂀</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">© 2025 Dilindungi oleh Dewa Pengetahuan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

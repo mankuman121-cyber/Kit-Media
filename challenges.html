@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuil Sifer - Ujian Firaun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="sand-overlay"></div>
+
+    <nav>
+        <div class="logo">𓂀 Kriptografi Dalam Keselamatan Data</div>
+        <ul class="nav-links">
+            <li><a href="index.html">𓉔 Laman Utama</a></li>
+            <li><a href="learn.html">𓏿 Nota</a></li>
+            <li><a href="textbook.html">📖 Buku Teks</a></li>
+            <li><a href="tools.html">𓌪 Alat Sifer</a></li>
+            <li><a href="challenges.html" class="active">⚔️ Cabaran</a></li>
+            <li><a href="quiz.html">𓃭 Kuiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hieroglyph-border">
+                <h1>⚔️ Ujian Firaun ⚔️</h1>
+                <p>Buktikan penguasaan anda dalam seni sifer</p>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>⚔️ Empat Ujian Suci</h2>
+            <p class="scroll-text">Nyahkod mesej ini untuk membuktikan diri anda layak...</p>
+            
+            <div class="grid">
+                <div class="challenge-card pyramid-card" onclick="startChallenge(1)">
+                    <div class="pyramid-top">I</div>
+                    <h3>Ujian Permulaan - Reverse</h3>
+                    <div class="cipher-text">DLROW OLLEH</div>
+                    <p><strong>Petunjuk:</strong> Balikkan mesej sahaja</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Ujian paling mudah. Walaupun jurutulis muda boleh menguasainya.</p>
+                    <span class="difficulty easy">Tahap Permulaan</span>
+                </div>
+
+                <div class="challenge-card pyramid-card" onclick="startChallenge(2)">
+                    <div class="pyramid-top">II</div>
+                    <h3>Ujian Jurutulis - Caesar</h3>
+                    <div class="cipher-text">KHOOR ZRUOG</div>
+                    <p><strong>Petunjuk:</strong> Caesar dengan anjakan 3</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Sifer yang digunakan oleh Julius Caesar sendiri.</p>
+                    <span class="difficulty easy">Tahap Mudah</span>
+                </div>
+                
+                <div class="challenge-card pyramid-card" onclick="startChallenge(3)">
+                    <div class="pyramid-top">III</div>
+                    <h3>Ujian Pendeta - ROT13</h3>
+                    <div class="cipher-text">JRYPBZR GB GUR PVCURE NPNQRZL</div>
+                    <p><strong>Petunjuk:</strong> ROT13 - Putaran suci</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Putaran mistik di mana penyulitan dan penyahsulitan adalah satu.</p>
+                    <span class="difficulty medium">Tahap Sederhana</span>
+                </div>
+                
+                <div class="challenge-card pyramid-card" onclick="startChallenge(4)">
+                    <div class="pyramid-top">IV</div>
+                    <h3>Ujian Pendeta Tinggi</h3>
+                    <div class="cipher-text">WKLV LV D VHFUHW PHVVDJH</div>
+                    <p><strong>Petunjuk:</strong> Dewa menguji kesabaran anda. Cuba anjakan yang berbeza...</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Hanya yang paling berdedikasi akan membuka rahsia ini.</p>
+                    <span class="difficulty hard">Tahap Sukar</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="challengeArea" style="display: none;">
+            <div class="cipher-tool stone-tablet">
+                <h3>𓀀 Nyatakan Jawapan Anda kepada Dewa</h3>
+                <p>Masukkan mesej yang telah dinyahkod di bawah untuk melengkapkan ujian:</p>
+                <input type="text" id="challengeAnswer" placeholder="Masukkan teks suci yang dinyahkod..." style="text-transform: uppercase;">
+                <button onclick="checkChallenge()" class="egyptian-btn large">
+                    ✓ Persembahkan kepada Dewa
+                </button>
+                <div id="challengeResult"></div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🎯 Petua Cabaran</h2>
+            <ul class="tips-list">
+                <li><strong>Gunakan Alat Jurutulis:</strong> Pergi ke <a href="tools.html" style="color: #8b6914; font-weight: bold;">halaman Alat</a> untuk menguji anjakan yang berbeza!</li>
+                <li><strong>Reverse Cipher:</strong> Hanya balikkan urutan huruf dari belakang ke hadapan.</li>
+                <li><strong>ROT13 dijelaskan:</strong> Ia adalah Caesar cipher dengan anjakan 13. Istimewa kerana menyulitkan dua kali memberikan mesej asal.</li>
+                <li><strong>Bersabar:</strong> Untuk Ujian IV, anda mungkin perlu mencuba beberapa nilai anjakan untuk mencari yang betul.</li>
+                <li><strong>Huruf sahaja:</strong> Sifer biasanya hanya mengalihkan huruf, bukan ruang atau tanda baca.</li>
+                <li><strong>Corak Huruf:</strong> Perhatikan huruf pendek seperti "A", "I" dalam bahasa Inggeris - ia boleh membantu anda meneka.</li>
+                <li><strong>Frekuensi:</strong> Dalam bahasa Inggeris, huruf 'E' paling kerap muncul. Gunakan ini untuk analisis!</li>
+            </ul>
+        </div>
+
+        <div class="card papyrus">
+            <h2>📚 Ingin Belajar Lebih Lanjut?</h2>
+            <p class="scroll-text">Jika anda menghadapi kesukaran dengan cabaran ini, cuba:</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="learn.html" class="egyptian-btn">
+                    <span class="hieroglyph">𓏿</span> Semak Nota Pembelajaran
+                </a>
+                <a href="textbook.html" class="egyptian-btn">
+                    <span class="hieroglyph">📖</span> Baca Buku Teks
+                </a>
+                <a href="tools.html" class="egyptian-btn">
+                    <span class="hieroglyph">𓌪</span> Latih dengan Alat
+                </a>
+                <a href="quiz.html" class="egyptian-btn">
+                    <span class="hieroglyph">𓃭</span> Uji Pengetahuan Asas
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="egyptian-footer">
+        <p>𓂀 Kuil Sifer - Di Mana Kebijaksanaan Purba Bertemu Kriptografi Moden 𓂀</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">© 2025 Dilindungi oleh Dewa Pengetahuan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
