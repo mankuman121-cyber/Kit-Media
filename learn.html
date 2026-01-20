@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuil Sifer - Nota Pembelajaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="sand-overlay"></div>
+
+    <nav>
+        <div class="logo">𓂀 Kriptografi Dalam Keselamatan Data</div>
+        <ul class="nav-links">
+            <li><a href="index.html">🏛️ Laman Utama</a></li>
+            <li><a href="learn.html" class="active">📚 Nota</a></li>
+            <li><a href="textbook.html">📖 Buku Teks</a></li>
+            <li><a href="tools.html">🔧 Alat Sifer</a></li>
+            <li><a href="challenges.html">⚔️ Cabaran</a></li>
+            <li><a href="quiz.html">📝 Kuiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hieroglyph-border">
+                <h1>📚 Nota Pembelajaran 📚</h1>
+                <p>Konsep dan teknik kriptografi</p>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🔐 Apakah Kriptografi?</h2>
+            <p>
+                Kriptografi adalah kaedah mengubah teks biasa (plaintext) kepada teks rahsia (ciphertext). Hanya mereka yang mempunyai kunci rahsia boleh membaca mesej asal.
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong>Penyulitan (Encryption):</strong> Mengubah teks biasa kepada sifer<br>
+                <strong>Penyahsulitan (Decryption):</strong> Memulihkan teks asal daripada sifer
+            </p>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🔄 Reverse Cipher</h2>
+            <p><strong>Kesukaran:</strong> <span class="difficulty easy">Permulaan</span></p>
+            <p style="margin-top: 1rem;">
+                Membalikkan urutan huruf dalam mesej.
+            </p>
+            <div class="example-box">
+                <strong>Contoh:</strong><br>
+                Teks Asal: HELLO WORLD<br>
+                Teks Sifer: DLROW OLLEH
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>📋 Jenis-Jenis Sifer</h2>
+            
+            <div class="grid" style="margin-top: 2rem;">
+                <div class="pyramid-card">
+                    <div class="pyramid-top">1</div>
+                    <h3>Caesar Cipher</h3>
+                    <p><strong>Kesukaran:</strong> <span class="difficulty easy">Mudah</span></p>
+                    <p style="margin-top: 1rem;">
+                        Mengalihkan setiap huruf dengan nombor tetap dalam abjad.
+                    </p>
+                    <div class="example-box">
+                        <strong>Contoh (Anjakan 3):</strong><br>
+                        Teks Asal: HELLO<br>
+                        Teks Sifer: KHOOR<br><br>
+                        H(+3)→K, E(+3)→H, L(+3)→O
+                    </div>
+                </div>
+
+                <div class="pyramid-card">
+                    <div class="pyramid-top">2</div>
+                    <h3>Substitution Cipher</h3>
+                    <p><strong>Kesukaran:</strong> <span class="difficulty medium">Sederhana</span></p>
+                    <p style="margin-top: 1rem;">
+                        Setiap huruf digantikan dengan huruf atau simbol lain.
+                    </p>
+                    <div class="example-box">
+                        <strong>Contoh (Atbash):</strong><br>
+                        A↔Z, B↔Y, C↔X<br>
+                        Teks Asal: HELLO<br>
+                        Teks Sifer: SVOOL<br><br>
+                        <strong>Pigpen:</strong> Menggunakan simbol geometri
+                    </div>
+                </div>
+
+                <div class="pyramid-card">
+                    <div class="pyramid-top">3</div>
+                    <h3>Vigenère Cipher</h3>
+                    <p><strong>Kesukaran:</strong> <span class="difficulty hard">Lanjutan</span></p>
+                    <p style="margin-top: 1rem;">
+                        Menggunakan kata kunci untuk anjakan berbeza bagi setiap huruf.
+                    </p>
+                    <div class="example-box">
+                        <strong>Contoh:</strong><br>
+                        Kata Kunci: KEY<br>
+                        Teks Asal: HELLO<br>
+                        Teks Sifer: RIJVS<br><br>
+                        H+K(10)=R, E+E(4)=I, L+Y(24)=J
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🔀 Transposition Cipher</h2>
+            <p><strong>Kesukaran:</strong> <span class="difficulty medium">Sederhana</span></p>
+            <p style="margin-top: 1rem;">
+                Mengubah kedudukan huruf tanpa mengubah huruf itu sendiri. Kaedah: <strong>Rail Fence Cipher</strong>
+            </p>
+            <div class="example-box">
+                <strong>Rail Fence (2 Rails):</strong><br>
+                Teks Asal: HELLO WORLD<br><br>
+                Rail 1: H . L . O . O . L .<br>
+                Rail 2: . E . L . W . R . D<br><br>
+                Teks Sifer: HLOOL ELWRD
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>💡 Konsep Penting</h2>
+            <ul class="tips-list">
+                <li><strong>Kunci Rahsia:</strong> Penghantar dan penerima mesti berkongsi kunci yang sama (contoh: anjakan 3, kata kunci "RAHSIA").</li>
+                <li><strong>Keselamatan Kunci:</strong> Jika kunci bocor, mesej tidak lagi rahsia. Kunci mesti dijaga dengan baik.</li>
+                <li><strong>Kelemahan Sifer Klasik:</strong> Caesar dan Reverse mudah dipecahkan. Sifer moden menggunakan algoritma kompleks (AES, RSA).</li>
+                <li><strong>Analisis Frekuensi:</strong> Dalam Bahasa Inggeris, huruf 'E' paling kerap muncul - gunakan ini untuk memecah sifer penggantian.</li>
+                <li><strong>Aplikasi Moden:</strong> Kriptografi melindungi maklumat peribadi, transaksi kewangan, dan komunikasi dalam talian (WhatsApp, e-mel).</li>
+            </ul>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🎯 Aktiviti Pembelajaran</h2>
+            <div class="instruction-grid">
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <h3>Bermain Peranan</h3>
+                    <p>Bentuk kumpulan: Komander (hantar mesej), Ejen Rahsia (sekutu), Perisik Musuh (lawan). Berlumba menyahsulit mesej.</p>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <h3>Cipta Kod Sendiri</h3>
+                    <p>Hasilkan kod rahsia dan tukar dengan rakan. Cuba gabungkan beberapa teknik sifer.</p>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">3</div>
+                    <h3>Latihan Berperingkat</h3>
+                    <p>Mulakan dengan Reverse, kemudian Caesar, Transposition, dan akhirnya Vigenère.</p>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">4</div>
+                    <h3>Aplikasi Praktis</h3>
+                    <p>Gunakan alat digital untuk berlatih. Pastikan kunci dikongsi dengan betul.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🎥 Video Pembelajaran</h2>
+            <div class="grid">
+                <div class="video-frame">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/yGKXpmyKz8k?si=PcJvPtTqbBk6Ue9f" frameborder="0" allowfullscreen></iframe>
+                    <p style="margin-top: 0.5rem; text-align: center; font-weight: bold;">Sejarah Kriptografi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🔗 Seterusnya</h2>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="tools.html" class="egyptian-btn">
+                    🔧 Cuba Alat Praktis
+                </a>
+                <a href="challenges.html" class="egyptian-btn">
+                    ⚔️ Ambil Cabaran
+                </a>
+                <a href="quiz.html" class="egyptian-btn">
+                    📝 Uji Pengetahuan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="egyptian-footer">
+        <p>𓂀 Kuil Sifer - Pembelajaran Kriptografi © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
