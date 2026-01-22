@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuil Sifer - Misi Rahsia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="sand-overlay"></div>
+
+    <nav>
+        <div class="logo">𓂀 Kriptografi Dalam Keselamatan Data</div>
+        <ul class="nav-links">
+            <li><a href="index.html">🏛️ Laman Utama</a></li>
+            <li><a href="learn.html">📚 Nota</a></li>
+            <li><a href="textbook.html">📖 Buku Teks</a></li>
+            <li><a href="tools.html">🔧 Alat Sifer</a></li>
+            <li><a href="challenges.html" class="active">⚔️ Cabaran</a></li>
+            <li><a href="quiz.html">📝 Kuiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hieroglyph-border">
+                <h1>🔓 Misi Rahsia 🔓</h1>
+                <p>Nyahkod mesej dan buka kunci rahsia</p>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🔓 Empat Misi</h2>
+            <p class="scroll-text">Nyahkod mesej berikut untuk selesaikan misi:</p>
+            
+            <div class="grid">
+                <div class="challenge-card pyramid-card" onclick="startChallenge(1)">
+                    <div class="pyramid-top">I</div>
+                    <h3>Cabaran 1 - Reverse</h3>
+                    <div class="cipher-text">DLROW OLLEH</div>
+                    <p><strong>Petunjuk:</strong> Balikkan mesej</p>
+                    <span class="difficulty easy">Permulaan</span>
+                </div>
+
+                <div class="challenge-card pyramid-card" onclick="startChallenge(2)">
+                    <div class="pyramid-top">II</div>
+                    <h3>Cabaran 2 - Caesar</h3>
+                    <div class="cipher-text">KHOOR ZRUOG</div>
+                    <p><strong>Petunjuk:</strong> Anjakan 3</p>
+                    <span class="difficulty easy">Mudah</span>
+                </div>
+                
+                <div class="challenge-card pyramid-card" onclick="startChallenge(3)">
+                    <div class="pyramid-top">III</div>
+                    <h3>Cabaran 3 - ROT13</h3>
+                    <div class="cipher-text">JRYPBZR GB GUR PVCURE NPNQRZL</div>
+                    <p><strong>Petunjuk:</strong> ROT13</p>
+                    <span class="difficulty medium">Sederhana</span>
+                </div>
+                
+                <div class="challenge-card pyramid-card" onclick="startChallenge(4)">
+                    <div class="pyramid-top">IV</div>
+                    <h3>Cabaran 4 - Misteri</h3>
+                    <div class="cipher-text">WKLV LV D VHFUHW PHVVDJH</div>
+                    <p><strong>Petunjuk:</strong> Cuba anjakan berbeza</p>
+                    <span class="difficulty hard">Sukar</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="challengeArea" style="display: none;">
+            <div class="cipher-tool stone-tablet">
+                <h3>🔍 Jawapan Anda</h3>
+                <p>Masukkan mesej yang telah dinyahkod:</p>
+                <input type="text" id="challengeAnswer" placeholder="Masukkan jawapan..." style="text-transform: uppercase;">
+                <button onclick="checkChallenge()" class="egyptian-btn large">
+                    ✓ Semak Jawapan
+                </button>
+                <div id="challengeResult"></div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>🎯 Petua</h2>
+            <ul class="tips-list">
+                <li><strong>Gunakan Alat:</strong> Pergi ke <a href="tools.html" style="color: #8b6914; font-weight: bold;">halaman Alat</a> untuk menguji anjakan berbeza.</li>
+                <li><strong>Reverse Cipher:</strong> Balikkan urutan huruf dari belakang ke hadapan.</li>
+                <li><strong>ROT13:</strong> Caesar cipher dengan anjakan 13. Menyulitkan dua kali memberikan mesej asal.</li>
+                <li><strong>Bersabar:</strong> Untuk cabaran sukar, cuba beberapa nilai anjakan.</li>
+                <li><strong>Analisis Frekuensi:</strong> Huruf 'E' paling kerap dalam Bahasa Inggeris.</li>
+            </ul>
+        </div>
+
+        <div class="card papyrus">
+            <h2>📚 Perlukan Bantuan?</h2>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="learn.html" class="egyptian-btn">
+                    📚 Nota Pembelajaran
+                </a>
+                <a href="textbook.html" class="egyptian-btn">
+                    📖 Buku Teks
+                </a>
+                <a href="tools.html" class="egyptian-btn">
+                    🔧 Alat Praktis
+                </a>
+                <a href="quiz.html" class="egyptian-btn">
+                    📝 Kuiz
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="egyptian-footer">
+        <p>𓂀 Kuil Sifer - Pembelajaran Kriptografi © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

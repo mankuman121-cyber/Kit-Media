@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markas Sifer - Laman Utama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <nav>
+        <div class="logo">Kriptografi Dalam Keselamatan Data</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">🏛️ Laman Utama</a></li>
+            <li><a href="learn.html">📚 Nota</a></li>
+            <li><a href="textbook.html">📖 Buku Teks</a></li>
+            <li><a href="tools.html">🔧 Alat Sifer</a></li>
+            <li><a href="challenges.html">⚔️ Cabaran</a></li>
+            <li><a href="quiz.html">📝 Kuiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hieroglyph-border">
+                <h1>𓆣 Markas Sifer 𓆣</h1>
+                <p>Pelajari seni kriptografi untuk keselamatan data</p>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>𓂀 Pengenalan</h2>
+            <p>
+                Kriptografi adalah seni melindungi maklumat dengan menukar teks biasa kepada teks rahsia. Sama seperti hieroglif Mesir purba, sifer menyembunyikan mesej daripada mereka yang tidak memiliki kunci.
+            </p>
+            
+            <div class="decoder-demo">
+                <h3 style="color: #d4af37; margin-bottom: 1rem;">🔐 Cuba Sifer Caesar Sekarang!</h3>
+                <input type="text" class="decoder-input" id="demoInput" placeholder="Taip mesej anda di sini...">
+                <div class="decoder-output" id="demoOutput">Mesej tersulit akan muncul di sini</div>
+                <div class="demo-buttons">
+                    <button class="demo-btn" onclick="encryptDemo(3)">Enkripsi (Shift 3)</button>
+                    <button class="demo-btn" onclick="encryptDemo(5)">Enkripsi (Shift 5)</button>
+                    <button class="demo-btn" onclick="reverseDemo()">Reverse Cipher</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>📚 Objektif Pembelajaran</h2>
+            <ul class="tips-list">
+                <li>✨ Menghasilkan mesej tersulit menggunakan Reverse Cipher, Caesar Cipher, Pigpen Cipher dan Transposition Cipher</li>
+                <li>🔓 Menterjemah mesej rahsia yang telah disulitkan</li>
+                <li>🛡️ Memahami kepentingan keselamatan data dalam dunia digital</li>
+                <li>🔑 Mengaplikasikan konsep kunci rahsia untuk komunikasi selamat</li>
+            </ul>
+        </div>
+
+        <div class="card papyrus">
+            <h2>𓹹 Modul Pembelajaran</h2>
+            
+            <div class="grid">
+                <a href="learn.html" class="nav-card">
+                    <div class="pyramid-card">
+                        <div class="pyramid-top">📚</div>
+                        <h3>Nota Pembelajaran</h3>
+                        <p>Pelajari konsep dan teknik sifer asas serta lanjutan.</p>
+                        <span class="card-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="textbook.html" class="nav-card">
+                    <div class="pyramid-card">
+                        <div class="pyramid-top">📖</div>
+                        <h3>Buku Teks</h3>
+                        <p>Akses bahan rujukan lengkap untuk kajian mendalam.</p>
+                        <span class="card-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="tools.html" class="nav-card">
+                    <div class="pyramid-card">
+                        <div class="pyramid-top">🔧</div>
+                        <h3>Alat Praktis</h3>
+                        <p>Gunakan alat untuk mengekod dan menyahkod mesej.</p>
+                        <span class="card-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="challenges.html" class="nav-card">
+                    <div class="pyramid-card">
+                        <div class="pyramid-top">⚔️</div>
+                        <h3>Cabaran</h3>
+                        <p>Uji kemahiran anda dengan menyahkod mesej rahsia.</p>
+                        <span class="card-arrow">Masuk →</span>
+                    </div>
+                </a>
+
+                <a href="quiz.html" class="nav-card">
+                    <div class="pyramid-card">
+                        <div class="pyramid-top">📝</div>
+                        <h3>Kuiz</h3>
+                        <p>Nilai pengetahuan anda tentang kriptografi.</p>
+                        <span class="card-arrow">Masuk →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="card papyrus">
+            <h2>💡 Konsep Penting</h2>
+            <div class="oracle-quote">
+                <p><strong>Kunci Rahsia:</strong> Penghantar dan penerima mesti berkongsi kunci yang sama untuk komunikasi selamat. Jika kunci bocor, mesej tidak lagi rahsia.</p>
+            </div>
+            <div class="oracle-quote" style="margin-top: 1rem;">
+                <p><strong>Keselamatan Data:</strong> Kriptografi melindungi maklumat peribadi, transaksi kewangan, kata laluan, dan komunikasi dalam talian.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="egyptian-footer">
+        <p>𓂀 Markas Sifer - Pembelajaran Kriptografi © 2025</p>
+    </footer>
+
+    <script>
+        // Create animated particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Caesar Cipher encryption
+        function encryptDemo(shift) {
+            const input = document.getElementById('demoInput').value;
+            const output = document.getElementById('demoOutput');
+            
+            if (!input) {
+                output.textContent = 'Sila taip mesej terlebih dahulu!';
+                return;
+            }
+            
+            let result = '';
+            for (let char of input) {
+                if (char.match(/[a-z]/i)) {
+                    const code = char.charCodeAt(0);
+                    const isUpperCase = char === char.toUpperCase();
+                    const base = isUpperCase ? 65 : 97;
+                    result += String.fromCharCode(((code - base + shift) % 26) + base);
+                } else {
+                    result += char;
+                }
+            }
+            
+            output.textContent = result;
+            output.style.animation = 'none';
+            setTimeout(() => {
+                output.style.animation = 'glowPulse 1s';
+            }, 10);
+        }
+
+        // Reverse Cipher
+        function reverseDemo() {
+            const input = document.getElementById('demoInput').value;
+            const output = document.getElementById('demoOutput');
+            
+            if (!input) {
+                output.textContent = 'Sila taip mesej terlebih dahulu!';
+                return;
+            }
+            
+            output.textContent = input.split('').reverse().join('');
+            output.style.animation = 'none';
+            setTimeout(() => {
+                output.style.animation = 'glowPulse 1s';
+            }, 10);
+        }
+
+        // Add hover effect to list items
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            const listItems = document.querySelectorAll('.tips-list li');
+            listItems.forEach((item, index) => {
+                item.style.animationDelay = (index * 0.1) + 's';
+            });
+        });
+    </script>
+</body>
+</html>
